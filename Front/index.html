@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>ふいいどりいだあ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='js/RSS.js'></script>
+    <script src='js/RssSetting.js'></script>
+    <script src='js/ColorSetting.js'></script>
+    <script src='js/Page.js'></script>
+    <script src='js/WindowLoad.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/ColorSetting.css" />
+    <link rel="stylesheet" type="text/css" href="css/RightComponent.css" />
+    <link rel="stylesheet" type="text/css" href="css/LeftComponent.css" />
+    <link rel="stylesheet" type="text/css" href="css/ModalSetting.css" />
+    <link rel="stylesheet" type="text/css" href="css/FeedSetting.css" />
+</head>
+<body>
+  <div id="left">
+      <p style="font-size:150%;color: rgba(0, 0, 0, 0.50); margin:10px 0 40px 10px">ふいいどりいだあ</p>
+      <div id="sort">
+        <p style="font-size:100%; color:rgba(0, 0, 0, 0.50); margin:0 0 0 10px;">ふいいどたち</p>
+      </div>
+      <div id='setting'>
+        <p style="font-size:100%;color: rgba(0, 0, 0, 0.50); margin:50px 0 0 10px">せつていんぐ</p>
+        <div class='pagetitle' onclick="OpenModalSetting()">
+          <img src="img/change.png"/>
+          <h5>ふいいどせれくと</h5>
+        </div>
+        <div class='pagetitle' onclick="OpenColorSetting()">
+          <img src="img/color.png"/>
+          <h5>からあせれくと</h5>
+        </div>
+      </div>
+  </div>
+  <div id="main"></div>
+  <div id="modal">
+    <div id="right">
+      <div class="close" onclick="visible()">×</div>
+    </div>
+  </div>
+</body>
+</html>

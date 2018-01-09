@@ -1,0 +1,31 @@
+#left{
+  width: 20%;
+  height:100%;
+  background-color:#F5F5F5;
+  position: fixed;
+  top:0%;
+  border-right: solid 1px #C5C5C5;
+}
+
+#setting{
+  position: absolute;
+  bottom: 2%;
+}
+
+.pagetitle{
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  cursor: pointer;
+  padding: 10px;
+  font-style: italic;
+}
+
+
+.pagetitle:hover{
+  color: #f57c00;
+  background-color: #f0f0f0;
+}
+
+.pagetitle > h5{
+  margin: 0 0 0 5px;
+}

@@ -1,0 +1,112 @@
+#feedsetting{
+  height: 100%;
+}
+#feedsetting > h3{
+  margin-left: 100px;
+  margin-top: -60px;
+  font-size: 2vw;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.50);
+}
+
+#searchtext{
+  outline: 0;
+  border: none;
+  font-size: 200%;
+}
+
+#searchbutton{
+  height: 47px;
+  font-size: 100%;
+  padding: 0 20px 0 20px;
+  background-color: #81D674;
+  color: #fff;
+  border-style: none;
+}
+#searchbutton:hover{
+  background-color: #A6E39D;
+}
+
+.search{
+  width: 70%;
+  display: grid;
+  grid-template-columns: 0.5fr 9.5fr;
+  grid-gap: 20px;
+  font-style: italic;
+  margin-left: 100px;
+  float: left;
+  border: 1px solid #C5C5C5;
+}
+
+.search > img{
+  margin: 10px;
+}
+
+
+#total{
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 100px;
+  height: 200px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 7fr 3fr;
+  display: none;
+}
+#total > img{
+  margin-top: 10px;
+  width: 50px;
+  object-fit: cover;
+}
+
+#total > h3{
+  margin: 0;
+  font-size: 2vw;
+  font-style: italic;
+}
+#total > h4{
+  color: #C5C5C5;
+  margin:-20px 10px 0 0;
+  font-size: 1.2vw;
+  text-align: center;
+  font-weight: normal;
+}
+
+#insertbutton{
+  margin:-20px 10px 0 0;
+  height: 47px;
+  font-size: 100%;
+  padding: 0 20px 0 20px;
+  background-color: #81D674;
+  color: #fff;
+  border-style: none;
+  cursor: pointer;
+}
+#insertbutton:hover{
+  background-color: #A6E39D;
+}
+
+.feedtitle{
+  display: grid;
+  grid-template-columns: 1fr 7fr 2fr;
+  padding: 10px;
+  font-style: italic;
+}
+
+.feedtitle > h5{
+  margin: 0;
+}
+
+.feedtitle > button{
+  height: 20px;
+  font-size: 80%;
+  border-radius: 20px;
+  background-color: #FF2A46;
+  color: #fff;
+  border-style: none;
+  cursor: pointer;
+}
+.feedtitle > button:hover{
+  background-color: #FF8091;
+}
