@@ -60,7 +60,7 @@ class ColorSetting{
       }
     };
 
-    req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/colorupdate?color=${encodeURIComponent(checkword)}&number=${number}`, true);
+    req.open('GET', `鯖のURLcolorupdate?color=${encodeURIComponent(checkword)}&number=${number}`, true);
     req.send(null);
   };
 }

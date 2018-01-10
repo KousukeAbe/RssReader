@@ -56,7 +56,7 @@ class Page {
     document.getElementById("uho").remove();
     var right = document.getElementById('right');
     var kizi = document.createElement('iframe');
-    kizi.setAttribute('src', `https://akgalaxy-rss-reader.herokuapp.com/uhu?url=${url}`);
+    kizi.setAttribute('src', `鯖のURLuhu?url=${url}`);
     kizi.setAttribute('id', 'uho');
     right.appendChild(kizi);
   };

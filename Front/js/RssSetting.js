@@ -53,13 +53,13 @@ class RssSetting{
       }
     };
     if(query == "rsscheck"){
-      req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/${query}?check=${data[0]}`, true);
+      req.open('GET', `鯖のURL${query}?check=${data[0]}`, true);
       req.send(null);
     }else if(query == "insert"){
-      req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/${query}?link=${data[0]}`, true);
+      req.open('GET', `鯖のURL${query}?link=${data[0]}`, true);
       req.send(null);
     }else{
-      req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/${query}?link=${data[0]}`, true);
+      req.open('GET', `鯖のURL${query}?link=${data[0]}`, true);
       req.send(null);
     }
 

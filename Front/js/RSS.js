@@ -57,7 +57,7 @@ class RSS {
         //  result.innerHTML = "通信中..."
       }
     };
-    req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/${query}?title=${this.title}`, true);
+    req.open('GET', `鯖のURL${query}?title=${this.title}`, true);
     req.send(null);
   }
 
