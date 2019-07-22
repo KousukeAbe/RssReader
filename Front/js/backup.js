@@ -13,7 +13,7 @@ window.onload = function() {
     //  result.innerHTML = "通信中..."
   }
   };
-  req.open('GET', 'http://localhost:8000/uho', true);
+  req.open('GET', 'https://akgalaxy-rss-reader.herokuapp.com/uho', true);
   req.send(null);
 };
 
@@ -52,7 +52,7 @@ function list(text){
       //  result.innerHTML = "通信中..."
     }
     };
-    req.open('GET', 'http://localhost:8000/uhi', true);
+    req.open('GET', 'https://akgalaxy-rss-reader.herokuapp.com/uhi', true);
     req.send(null);
 }
 
@@ -135,7 +135,7 @@ function ReRender(){
     var right = document.getElementById('right');
 
     var kizi = document.createElement('iframe');
-    kizi.setAttribute('src', `http://localhost:8000/uhu?url=${url}`);
+    kizi.setAttribute('src', `https://akgalaxy-rss-reader.herokuapp.com/uhu?url=${url}`);
     kizi.setAttribute('id', 'uho');
     right.appendChild(kizi);
   }
@@ -257,7 +257,7 @@ function colorsend(event){
     }
   };
 
-  req.open('GET', `http://localhost:8000/colorupdate?color=${encodeURIComponent(checkword)}&number=${number}`, true);
+  req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/colorupdate?color=${encodeURIComponent(checkword)}&number=${number}`, true);
   req.send(null);
 
 
@@ -284,7 +284,7 @@ function search(){
     }
   };
 
-  req.open('GET', `http://localhost:8000/rsscheck?check=${text}`, true);
+  req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/rsscheck?check=${text}`, true);
   req.send(null);
 }
 
@@ -361,7 +361,7 @@ function insert(event){
     }
   };
 
-  req.open('GET', `http://localhost:8000/insert?link=${event.getAttribute('link')}`, true);
+  req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/insert?link=${event.getAttribute('link')}`, true);
   req.send(null);
 }
 
@@ -397,6 +397,6 @@ function deleteing(event){
     }
   };
 
-  req.open('GET', `http://localhost:8000/delet?link=${link}`, true);
+  req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/delet?link=${link}`, true);
   req.send(null);
 };

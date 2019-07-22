@@ -10,7 +10,7 @@ window.onload = function(){
       }
     }
   };
-  req.open('GET', '鯖のURL', true);
+  req.open('GET', 'https://akgalaxy-rss-reader.herokuapp.com/GetRSSList', true);
   req.send(null);
 };
 

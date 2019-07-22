@@ -18,7 +18,6 @@ class RSS {
   };
 
   RightListUp(data, rss){
-    console.log(data[0]);
     var element = document.createElement('div');
     element.setAttribute('class', 'page');
     element.innerHTML = `<header class="title">${rss.title}</header>`;
@@ -32,7 +31,12 @@ class RSS {
       kizi.setAttribute('class', 'container');
       kizi.setAttribute('name', data[0][i].link);
       kizi.setAttribute('onclick', 'OpenArticle(this)');
-      kizi.innerHTML += data[0][i].image ? data[0][i].image[0]: `<img src="http://eventsnews.info/wp-content/uploads/2015/12/gazou03318.jpg" />`;
+
+      var image = document.createElement('img');
+      console.log(typeof data[0][i].image);
+      image.src = typeof data[0][i].image == "object" ? data[0][i].image[0]: data[0][i].image;
+      image.src = image.src.match(/(?:jpg|gif|png)/gi) ? image.src : "http://eventsnews.info/wp-content/uploads/2015/12/gazou03318.jpg";
+      kizi.appendChild(image);
       kizi.innerHTML += `<h3>${data[0][i].title}</h3>`;
       var uhp = new Date(data[0][i].day);
       kizi.innerHTML += `<h4>${uhp.getFullYear()}年${uhp.getMonth() + 1}月${uhp.getDate() + 1}日 ${uhp.getHours()}:${uhp.getMinutes() < 10 ? "0" + uhp.getMinutes() : uhp.getMinutes()}</h4>`;
@@ -50,14 +54,13 @@ class RSS {
     req.onreadystatechange = function(){
       if(req.readyState == 4) { // 通信の完了時
         if(req.status == 200) { // 通信の成功時
-          console.log(req.responseText);
           fn(JSON.parse(req.responseText), rss);
         }
       }else{
         //  result.innerHTML = "通信中..."
       }
     };
-    req.open('GET', `鯖のURL${query}?title=${this.title}`, true);
+    req.open('GET', `https://akgalaxy-rss-reader.herokuapp.com/${query}?title=${this.title}`, true);
     req.send(null);
   }
 
